@@ -40,7 +40,7 @@ console.log("A soma dos números é:", soma);
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
-A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
+``A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.``
 
 B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
@@ -57,7 +57,7 @@ ______
 //Versão 1 da função que calcula orçamento
 function calculaOrcamento(){
 
-    var gastos = [1800, 950, 620, 38];
+    var gastos = [3600, 950, 620, 38];
     var totalGastos = gastos[0];
     var salario = 3500;
     var saldo = 0; 
@@ -82,7 +82,7 @@ function calculaOrcamento(){
 //Versão 2 da função que calcula orçamento
 function calculaOrcamento2(){
 
-    var gastos = [1800, 950, 620, 38];
+    var gastos = [3600, 950, 620, 38];
     var totalGastos = gastos[0];
     var salario = 3500;
     var statusSaldo =  'positivo';
@@ -104,7 +104,7 @@ function calculaOrcamento2(){
 
 Escolha a opção que responde corretamente qual seria a saída após a execução de cada função:
 
-A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
+``A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'``
 
 B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
 
@@ -137,7 +137,7 @@ B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensage
 
 C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
-D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".
+``D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".``
 
 
 ______
@@ -201,7 +201,7 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+``D)``
 
 Compra 1 aprovada. Saldo restante: 800
 
@@ -221,7 +221,7 @@ Escolha a opção que responde corretamente:
 
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+``B) Preload -> Create -> Update``
 
 C) Load -> Initialize -> Render
 
@@ -234,7 +234,7 @@ Escolha a opção que responde corretamente:
 
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+``B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.``
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
@@ -246,6 +246,19 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+
+INICIO
+    Exibir "Insira sua idade"
+    Ler idade
+    SE idade < 16 ENTÃO
+        Exibir "Não pode votar!"
+    SENÃO SE idade >= 16 E idade < 18 ENTÃO
+        Exibir "Voto facultativo!"
+    SENÃO
+        Exibir "Voto obrigatório"
+    FIM SE
+FIM
+
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -262,6 +275,30 @@ Classe FormaGeometrica:
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
 ```
+INICIO
+    Classe Retangulo herda FormaGeometrica
+        Atributos:
+            Altura
+            Base
+        Construtor(cor, altura, base)
+            super (cor)
+            Define altura
+            Define base
+        Método CalcularArea():
+            Area = altura x base
+            Imprimir Area
+    
+    Classe Circulo herda FormaGeometrica
+        Atributos:
+            Raio
+            Pi = 3,14
+        Construtor (cor, raio, pi)
+            super (cor)
+            Define raio
+            Define Pi
+        Método CalcularArea():
+            Area = raio * raio * pi
+            Imprimir Area
 
 ______
 

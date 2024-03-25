@@ -308,6 +308,35 @@ Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
 ```
+velocidadeInicial = 10
+aceleração = 2
+velocidadeMax = 80
+tempoMax = 120
+distanciaMax = 100
+tempo = 0
+distanciaPercorrida = 0
+
+Enquanto verdadeiro:
+    Se tempo >= tempoMax:
+        Imprimir "Tempo máximo alcançado."
+        Sair do loop
+    
+    velocidadeAtual = velocidadeInicial + aceleração * tempo
+    
+    Se velocidadeAtual > velocidadeMax:
+        velocidadeAtual = velocidadeMax
+    
+    distanciaPercorrida = distanciaPercorrida + velocidadeAtual * (1/60) # Convertendo velocidade por hora para distância por minuto
+    
+    Se distanciaPercorrida >= distanciaMax:
+        Imprimir "Distância máxima alcançada em", tempo, "minutos."
+        Sair do loop
+    
+    tempo = tempo + 1
+
+Se distanciaPercorrida < distanciaMax:
+    Imprimir "Não foi possível completar a distância máxima dentro do tempo e limites de velocidade."
+
 
 ______
 
@@ -337,4 +366,33 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+
+
 ```
+Função MultiplicaMatrizes(matrizA, matrizB):
+    # Verifica se o número de colunas da matrizA é igual ao número de linhas da matrizB
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:
+        Retornar "As matrizes não podem ser multiplicadas. O número de colunas da primeira matriz não é igual ao número de linhas da segunda matriz."
+    Senão:
+        linhasA <- tamanho(matrizA)
+        colunasA <- tamanho(matrizA[0]) # Número de colunas na matrizA
+        colunasB <- tamanho(matrizB[0]) # Número de colunas na matrizB
+        matrizResultado <- novaMatriz(linhasA, colunasB)
+
+        # Loop para calcular a multiplicação das matrizes
+        Para i de 0 até linhasA-1 faça:
+            Para j de 0 até colunasB-1 faça:
+                # Inicializa o elemento da matrizResultado com 0
+                matrizResultado[i][j] <- 0
+                Para k de 0 até colunasA-1 faça:
+                    matrizResultado[i][j] <- matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])
+
+        Retornar matrizResultado
+
+# Exemplo de uso da função
+matrizA <- [[1, 2, 3], [4, 5, 6]]
+matrizB <- [[7, 8], [9, 10], [11, 12]]
+
+matrizMultiplicacao <- MultiplicaMatrizes(matrizA, matrizB)
+Escrever("Multiplicação das matrizes:")
+ImprimirMatriz(matrizMultiplicacao)
